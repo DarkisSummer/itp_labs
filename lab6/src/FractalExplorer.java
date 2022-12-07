@@ -194,6 +194,8 @@ public class FractalExplorer {
          }
          display.repaint();
          */
+
+        @Override
         protected Object doInBackground() {
             RGB = new int[size];
             for(int x = 0; x < RGB.length; x++) {
@@ -211,6 +213,7 @@ public class FractalExplorer {
             return null;
         }
 
+        @Override
         protected void done() {
             for(int i = 0; i < RGB.length; i++) {
                 display.drawPixel(i, y, RGB[i]);
